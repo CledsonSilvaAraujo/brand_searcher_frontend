@@ -13,7 +13,7 @@ function App() {
     setMessage('');
 
     try {
-      const response = await fetch('http://localhost:8080/identify-key-words', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/identify-key-words`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
